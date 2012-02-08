@@ -2,4 +2,5 @@
 test.js
 auth
 .project
+*.un~
 node_modules
