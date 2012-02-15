@@ -210,6 +210,25 @@ module.exports = {
     });
   },
 
+  'test for multipart stream upload and commit': function(done){
+    var resourceName = '/test/blob.bin';
+    client.beginUpload(resourceName, function(err, uploadId) {
+      if (err) throw err;
+
+      var stream = fs.createReadStream(jsonFixture);
+
+      client.putPartStream(resourceName, stream, 13 , 1, uploadId, function(err, part) {
+        if (err) throw err;
+
+        client.completeUpload(resourceName, uploadId, [part], function(err, info) {
+          if (err) throw err;
+
+          done();
+        });
+      });
+    });
+  },
+
   'test for multipart upload and abort': function(done){
     var resourceName = '/test/blob.bin';
     client.beginUpload(resourceName, function(err, uploadId){
