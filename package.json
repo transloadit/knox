@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git://github.com/LearnBoost/knox.git"
   },
-  "dependencies": {
+  "devDependencies": {
     "expresso": "latest"
   }
 }
