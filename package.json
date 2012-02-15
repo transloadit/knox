@@ -17,6 +17,6 @@
     "url": "git://github.com/LearnBoost/knox.git"
   },
   "dependencies": {
-    "xml2json": "~0.2.4"
+    "expresso": "latest"
   }
 }

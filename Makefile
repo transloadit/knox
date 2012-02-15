@@ -1,6 +1,6 @@
 
 test:
-	@./support/expresso/bin/expresso test/*.test.js \
+	@node_modules/expresso/bin/expresso test/*.test.js \
 		--timeout 8000 \
 		--serial \
 		-I lib
